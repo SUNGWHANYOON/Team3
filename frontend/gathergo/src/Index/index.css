@@ -406,7 +406,7 @@ li.nav-item.divider {
   padding: 0;
 }
 /* side bar */
-/* #sidebar.active {
+#sidebar.active {
   display: flex;
 }
 
@@ -615,4 +615,4 @@ li.nav-item.divider {
 .log-list {
   clear: both;
   overflow-y: scroll;
-} */
+}

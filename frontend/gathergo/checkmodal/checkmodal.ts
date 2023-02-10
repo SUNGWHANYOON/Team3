@@ -16,7 +16,7 @@ const joinCheck = `
     <div class = "joinCheck-modal-container">
         <div class = "joinCheck-modal-background">
             <div class = "joinCheck-modal">
-                <input type="text" value="참가 하시겠습니까?." readonly>
+                <div>모임에 참가하시겠습니까?.</div>
                 <div style = "display : flex; justify-content : space-between">
                     <button id = "check-modal-cancel">취소</button>
                     <button>참가</button>
@@ -29,7 +29,7 @@ const gatheringEdit = `
     <div class = "gatheringEdit-modal-container">
         <div class = "gatheringEdit-modal-background">
             <div class = "gatheringEdit-modal">
-                <input type="text" value="모임을 수정하시겠습니까?." readonly>
+                <div>모임을 수정 하시겠습니까?</div>
                 <div style = "display : flex; justify-content : space-between">
                     <button id = "check-modal-cancel">취소</button>
                     <button>수정</button>
@@ -63,6 +63,9 @@ const commentDelete = `
     </div>
 `;
 
+//------------------------------------------------- 필요한 모달 삽입하는 부분-------------------------------------------
+
+
 //insertCheckModal함수는 문자열 $checkModal의 값에 따라 상황에 맞는 모달을 modal-container에 넣어주는 함수입니다.
 function insertCheckModal($checkModal : string){
     const modalContainer = document.getElementById('modal-container');
@@ -84,7 +87,7 @@ function insertCheckModal($checkModal : string){
         checkModal.innerHTML = commentDelete;
         break;
     }
-
+    console.log(location.href)
     modalContainer?.appendChild(checkModal);
     
     checkModalBackgroundEvent($checkModal,checkModal)
@@ -144,6 +147,32 @@ function deleteAllCommentButton(){
 
 deleteAllCommentButton();
 rightClickDeleteComment();
+
+//------------------------------------------------------참가하기 버튼 이벤트 달기-------------------------------------------------------------
+
+function registerButtonEvent(){
+    const registerButtonList = document.getElementsByClassName('feed-info')
+    let registerButton : Element;
+    for(registerButton of registerButtonList){
+        registerButton.addEventListener('click',(e)=>{
+            insertCheckModal('joinCheck');
+        })
+    }
+}
+registerButtonEvent();
+
+//------------------------------------------------------수정하기 버튼 이벤트 달기-------------------------------------------------------------
+
+function settingButtonEvent(){
+    const settingButtonList = document.getElementsByClassName('setting-icon')
+    let settingButton : Element;
+    for(settingButton of settingButtonList){
+        settingButton.addEventListener('click',(e)=>{
+            insertCheckModal('gatheringEdit')
+        })
+    }
+}
+settingButtonEvent();
 
 export {loginCheck, joinCheck,gatheringDelete,gatheringEdit,commentDelete}
 export {insertCheckModal}

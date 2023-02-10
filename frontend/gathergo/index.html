@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="./src/index/index.css" />
   <link rel="stylesheet" href="./src/index/modal.css" />
   <link rel="stylesheet" href="./src/index/feedRead.css" />
-  <link rel="stylesheet" href="./src/index/notice.css" />
   <link rel="stylesheet" href="./checkmodal/checkmodal.css" />
 
   <title>GatherGo</title>
@@ -488,7 +487,7 @@
                   <strong class="user-id">testId1234</strong>
                 </div>
                 <div class="space"></div>
-                <div>
+                <div style = "display : flex">
                   <div class="user-info-icon" tooltip="어릴 때부터 부모님으로부터 남을 배려하고 남의 말에 귀 기울일 줄
                   아는 태도를 배우며 자랐습니다. 부모님이 귀찮아하실 정도로 활달하고
                   말이 많았던 어린 시절의 저에게 늘 귀를 기울여주시고 친구처럼 대화를
@@ -500,6 +499,7 @@
                   친구들 사이에서 저는 고민상담사로 통합니다." flow="down">
                     <img class="user-info-icon icon" src="./assets/Icons/who.png" alt="User" />
                   </div>
+                  <img class="user-info-icon icon setting-icon" src="./assets/Icons/setting icon.png" alt="User" />
                 </div>
 
               </div>
@@ -582,17 +582,12 @@
     </div>
   </div>
   
-  <div class = "notice-container">
-    <div class = "notice-background">
-      <div class="notice-sidebar">
-        <div class = "notice-sidebar-title"><h4><strong>알림</strong></h4></div>
-        <div class = "notice-sidebar-main">
-          <strong>제목#1</strong>에 참가하였습니다.
-          <strong>제목#1</strong>에 참가를 취소하였습니다.
-        </div>
-      </div>
+    <div id="sidebar" class="]">
+      <div id="sidebar-bg"></div>
+      <div id="sidebar-body">
     </div>
-  </div>
+    </div>
+
   <script type="text/javascript"
     src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e025d257c750a5635c774ac925157964&libraries=services"></script>
 
@@ -600,18 +595,24 @@
   <script>
     function noticeSidebar(){
       const toggleBtn = document.querySelector('#alarm-button');
-      const sidebar = document.querySelector('.notice-sidebar')
-      const sidebarBackground = document.querySelector('.notice-background');
+      const sidebar = document.querySelector('#sidebar')
+      const sidebarBackground = document.querySelector('#sidebar-bg');
+      const sidebarBody = document.querySelector('#sidebar-body')
 
       toggleBtn.setAttribute('style','cursor : pointer');
 
       toggleBtn.addEventListener('click', function () {
-        sidebarBackground.classList.toggle('is-closed');
+        sidebar.classList.toggle('.active');
+        sidebarBackground.classList.toggle('active');
+        sidebarBody.classList.toggle('active')
       });
       sidebarBackground.addEventListener('click',(e)=>{
         if(e.target != sidebar){
           e.stopPropagation();
-          sidebarBackground.classList.toggle('is-closed');
+          sidebar.classList.toggle('.active');
+          sidebarBackground.classList.toggle('active');
+          sidebarBody.classList.toggle('active')
+
         }
       })
     }
