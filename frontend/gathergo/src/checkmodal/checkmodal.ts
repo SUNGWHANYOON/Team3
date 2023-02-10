@@ -16,7 +16,7 @@ const joinCheck = `
     <div class = "joinCheck-modal-container">
         <div class = "joinCheck-modal-background">
             <div class = "joinCheck-modal">
-                <div>모임에 참가하시겠습니까?.</div>
+                <div>모임에 참가하시겠습니까?</div>
                 <div style = "display : flex; justify-content : space-between">
                     <button id = "check-modal-cancel">취소</button>
                     <button>참가</button>
