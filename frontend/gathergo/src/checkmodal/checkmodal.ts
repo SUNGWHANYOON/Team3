@@ -1,9 +1,11 @@
+import './modalTemplate'
+
 const loginCheck = `
     <div class = "loginCheck-modal-container">
         <div class = "loginCheck-modal-background">
             <div class = "loginCheck-modal">
-                <div>이 기능은 로그인이 필요합니다."</div>
-                <div>로그인 하시겠습니까?"<div>
+                <div>이 기능은 로그인이 필요합니다.</div>
+                <div>로그인 하시겠습니까?</div>
                 <div style = "display : flex; justify-content : space-between">
                     <button id = "check-modal-cancel">취소</button>
                     <button>로그인</button>
@@ -41,7 +43,7 @@ const gatheringDelete = `
     <div class = "gatheringDelete-modal-container">
         <div class = "gatheringDelete-modal-background">
             <div class = "gatheringDelete-modal">
-                <div>모임을 삭제 하시겠습니까?.</div>
+                <div>모임을 삭제 하시겠습니까?</div>
                 <div style = "display : flex; justify-content : space-between">
                     <button id = "check-modal-cancel">취소</button>
                     <button>삭제</button>
@@ -63,6 +65,18 @@ const commentDelete = `
     </div>
 `;
 
+const joinCancel = `
+    <div class = "commentDelete-modal-container">
+        <div class = "commentDelete-modal-background">
+            <div class = "commentDelete-modal">
+                <div>참가를 취소하시겠습니까?</div>
+                <div style = "display : flex; justify-content : space-between">
+                    <button id = "check-modal-cancel">취소</button>
+                    <button>삭제</button>
+            </div>
+        </div>
+    </div>
+`;
 //------------------------------------------------- 필요한 모달 삽입하는 부분-------------------------------------------
 
 
@@ -85,6 +99,9 @@ function insertCheckModal($checkModal : string){
         break;
       case 'commentDelete':
         checkModal.innerHTML = commentDelete;
+        break;
+      case 'joinCancel':
+        checkModal.innerHTML = joinCancel;
         break;
     }
     console.log(location.href)
@@ -151,7 +168,7 @@ rightClickDeleteComment();
 function registerButtonEvent(){
     const registerButtonList = document.getElementsByClassName('feed-info')
     for(const registerButton of Array.from(registerButtonList)){
-        registerButton.addEventListener('click',(e : Event)=>{
+        registerButton.addEventListener('click',()=>{
             insertCheckModal('joinCheck');
         })
     }
@@ -163,12 +180,43 @@ registerButtonEvent();
 function settingButtonEvent(){
     const settingButtonList = document.getElementsByClassName('setting-icon')
     for(const settingButton of Array.from(settingButtonList)){
-        settingButton.addEventListener('click', (e: Event) => {
+        settingButton.addEventListener('click', () => {
           insertCheckModal('gatheringEdit');
         });
     }
 }
 settingButtonEvent();
 
-export {loginCheck, joinCheck,gatheringDelete,gatheringEdit,commentDelete}
-export {insertCheckModal}
+//----------------------------------------------------로그인 안했을 때 버튼-----------------------------------------------------------------
+
+function notLoginEvent() {
+  const ButtonList = document.getElementsByClassName('not-login');
+  for (const notLoginButton of Array.from(ButtonList)) {
+    notLoginButton.addEventListener('click', () => {
+      insertCheckModal('loginCheck');
+    });
+  }
+}
+notLoginEvent();
+
+//---------------------------------------------------삭제하기 버튼-----------------------------------------------------------------------
+function settingNotLoginEvent() {
+  const ButtonList = document.getElementsByClassName('gathering-delete');
+  for (const settingButton of Array.from(ButtonList)) {
+    settingButton.addEventListener('click', () => {
+      insertCheckModal('gatheringDelete');
+    });
+  }
+}
+settingNotLoginEvent();
+
+//---------------------------------------------------참가 취소-----------------------------------------------------------------------
+function joinCancelEvent() {
+  const ButtonList = document.getElementsByClassName('register-cancel');
+  for (const settingButton of Array.from(ButtonList)) {
+    settingButton.addEventListener('click', () => {
+      insertCheckModal('joinCancel');
+    });
+  }
+}
+joinCancelEvent();
