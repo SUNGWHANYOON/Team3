@@ -633,9 +633,11 @@
       toggleBtn.setAttribute('style','cursor : pointer');
 
       toggleBtn.addEventListener('click', function () {
-        sidebar.classList.toggle('.active');
+        sidebar.classList.toggle('active');
         sidebarBackground.classList.toggle('active');
         sidebarBody.classList.toggle('active')
+        sidebarBody.classList.toggle('trans-ani')
+
       });
       sidebarBackground.addEventListener('click',(e)=>{
         if(e.target != sidebar){
@@ -643,6 +645,8 @@
           sidebar.classList.toggle('active');
           sidebarBackground.classList.toggle('active');
           sidebarBody.classList.toggle('active')
+          sidebarBody.classList.toggle('trans-ani')
+
 
         }
       })

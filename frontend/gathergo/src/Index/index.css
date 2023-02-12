@@ -431,14 +431,16 @@ li.nav-item.divider {
   background: var(--bs-gray-100);
   padding: 1rem 2rem;
   transition: all 0.3s;
+
 }
 
-.active #sidebar-body {
-  right: 0;
-  transform : translateX(42px)
+.trans-ani{
+  transform : translateX(-100%)
 }
 
 .active #sidebar-bg {
+  left : 0;
+  top : 0;
   animation: fadein 0.3s;
   -moz-animation: fadein 0.3s;
   -webkit-animation: fadein 0.3s;
