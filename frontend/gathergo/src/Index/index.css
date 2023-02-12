@@ -435,6 +435,7 @@ li.nav-item.divider {
 
 .active #sidebar-body {
   right: 0;
+  transform : translateX(42px)
 }
 
 .active #sidebar-bg {
