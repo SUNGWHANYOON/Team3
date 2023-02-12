@@ -422,7 +422,7 @@ li.nav-item.divider {
   overflow: auto;
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 33%;
   position: fixed;
   top: 0;
   right: -40%;
