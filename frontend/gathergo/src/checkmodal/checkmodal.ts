@@ -1,82 +1,115 @@
 import './modalTemplate'
 
 const loginCheck = `
-    <div class = "loginCheck-modal-container">
-        <div class = "loginCheck-modal-background">
-            <div class = "loginCheck-modal">
-                <div>이 기능은 로그인이 필요합니다.</div>
-                <div>로그인 하시겠습니까?</div>
-                <div style = "display : flex; justify-content : space-between">
-                    <button id = "check-modal-cancel">취소</button>
-                    <button>로그인</button>
+<div class = "loginCheck-modal-container">
+      <div class = "loginCheck-modal-background">
+          <div class = "loginCheck-modal">
+            <div class = "loginCheck-modal-header">알림</div>
+            <div class = "loginCheck-modal-divider"></div>
+                <div class = "loginCheck-modal-message">로그인이 필요합니다.</div>
+                <div style = "display : flex; justify-content : end;">
+                    <button type="button" class="btn btn-primary">로그인</button>
+                    <div class = "loginCheck-modal-button-divider"></div>
+                    <button type="button" class="btn btn-outline-secondary checkmodal-cancel">취소</button>
+
                 </div>
-            </div>
-        </div>
-    </div>
-`;
+              </div>
+          </div>
+      </div>
+  </div>
+  `;
 const joinCheck = `
-    <div class = "joinCheck-modal-container">
-        <div class = "joinCheck-modal-background">
-            <div class = "joinCheck-modal">
-                <div>모임에 참가하시겠습니까?</div>
-                <div style = "display : flex; justify-content : space-between">
-                    <button id = "check-modal-cancel">취소</button>
-                    <button>참가</button>
+<div class = "joinCheck-modal-container">
+      <div class = "joinCheck-modal-background">
+          <div class = "joinCheck-modal">
+            <div class = "joinCheck-modal-header">알림</div>
+            <div class = "joinCheck-modal-divider"></div>
+                <div class = "joinCheck-modal-message">참가하시겠습니까?</div>
+                <div style = "display : flex; justify-content : end;">
+                    <button type="button" class="btn btn-primary">참가</button>
+                    <div class = "joinCheck-modal-button-divider"></div>
+                    <button type="button" class="btn btn-outline-secondary checkmodal-cancel">취소</button>
+
                 </div>
-            </div>
-        </div>
-    </div>
-`;
+              </div>
+          </div>
+      </div>
+  </div>
+  `;
 const gatheringEdit = `
-    <div class = "gatheringEdit-modal-container">
-        <div class = "gatheringEdit-modal-background">
-            <div class = "gatheringEdit-modal">
-                <div>모임을 수정 하시겠습니까?</div>
-                <div style = "display : flex; justify-content : space-between">
-                    <button id = "check-modal-cancel">취소</button>
-                    <button>수정</button>
-            </div>
-        </div>
-    </div>
-`;
+<div class = "gatheringEdit-modal-container">
+      <div class = "gatheringEdit-modal-background">
+          <div class = "gatheringEdit-modal">
+            <div class = "gatheringEdit-modal-header">알림</div>
+            <div class = "gatheringEdit-modal-divider"></div>
+                <div class = "gatheringEdit-modal-message">수정하시겠습니까?</div>
+                <div style = "display : flex; justify-content : end;">
+                    <button type="button" class="btn btn-primary">수정</button>
+                    <div class = "gatheringEdit-modal-button-divider"></div>
+                    <button type="button" class="btn btn-outline-secondary checkmodal-cancel">취소</button>
+
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  `;
 const gatheringDelete = `
-    <div class = "gatheringDelete-modal-container">
-        <div class = "gatheringDelete-modal-background">
-            <div class = "gatheringDelete-modal">
-                <div>모임을 삭제 하시겠습니까?</div>
-                <div style = "display : flex; justify-content : space-between">
-                    <button id = "check-modal-cancel">취소</button>
-                    <button>삭제</button>
-            </div>
-        </div>
-    </div>
-`;
+<div class = "gatheringDelete-modal-container">
+      <div class = "gatheringDelete-modal-background">
+          <div class = "gatheringDelete-modal">
+            <div class = "gatheringDelete-modal-header">알람</div>
+            <div class = "gatheringDelete-modal-divider"></div>
+                <div class = "gatheringDelete-modal-message">모임을 삭제하시겠습니까?</div>
+                <div style = "display : flex; justify-content : end;">
+                    <button type="button" class="btn btn-primary">삭제</button>
+                    <div class = "gatheringDelete-modal-button-divider"></div>
+                    <button type="button" class="btn btn-outline-secondary checkmodal-cancel">취소</button>
+
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  `;
 
 const commentDelete = `
-    <div class = "commentDelete-modal-container">
-        <div class = "commentDelete-modal-background">
-            <div class = "commentDelete-modal">
-                <div>댓글을 삭제 하시겠습니까?</div>
-                <div style = "display : flex; justify-content : space-between">
-                    <button id = "check-modal-cancel">취소</button>
-                    <button>삭제</button>
-            </div>
-        </div>
-    </div>
-`;
+<div class = "commentDelete-modal-container">
+      <div class = "commentDelete-modal-background">
+          <div class = "commentDelete-modal">
+            <div class = "commentDelete-modal-header">알람</div>
+            <div class = "commentDelete-modal-divider"></div>
+                <div class = "commentDelete-modal-message">댓글을 삭제하시겠습니까?</div>
+                <div style = "display : flex; justify-content : end;">
+                    <button type="button" class="btn btn-primary">삭제</button>
+                    <div class = "commentDelete-modal-button-divider"></div>
+                    <button type="button" class="btn btn-outline-secondary checkmodal-cancel">취소</button>
+
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  `;
 
 const joinCancel = `
-    <div class = "commentDelete-modal-container">
-        <div class = "commentDelete-modal-background">
-            <div class = "commentDelete-modal">
-                <div>참가를 취소하시겠습니까?</div>
-                <div style = "display : flex; justify-content : space-between">
-                    <button id = "check-modal-cancel">취소</button>
-                    <button>삭제</button>
-            </div>
-        </div>
-    </div>
-`;
+<div class = "joinCancel-modal-container">
+      <div class = "joinCancel-modal-background">
+          <div class = "joinCancel-modal">
+            <div class = "joinCancel-modal-header">알람</div>
+            <div class = "joinCancel-modal-divider"></div>
+                <div class = "joinCancel-modal-message">참가신청을 삭제하시겠습니까?</div>
+                <div style = "display : flex; justify-content : end;">
+                    <button type="button" class="btn btn-primary">삭제</button>
+                    <div class = "joinCancel-modal-button-divider"></div>
+                    <button type="button" class="btn btn-outline-secondary checkmodal-cancel">취소</button>
+
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  `;
 //------------------------------------------------- 필요한 모달 삽입하는 부분-------------------------------------------
 
 
@@ -104,12 +137,21 @@ function insertCheckModal($checkModal : string){
         checkModal.innerHTML = joinCancel;
         break;
     }
-    console.log(location.href)
     modalContainer?.appendChild(checkModal);
     
     checkModalBackgroundEvent($checkModal,checkModal)
+    checkModalCancelEvent(checkModal)
 }
-//checkModalBackgroundEvent는 확인용 작은 모달들의 백그라운드를 누르면 모달이 내려가는 기능을 담당합니다.
+
+//각각의 checkModal의 취소버튼을 누르면 모달이 없어지는 기능을 담당합니다.
+
+function checkModalCancelEvent(checkModal : HTMLDivElement){
+  const checkModalCancelButton = document.querySelector('.checkmodal-cancel')
+  checkModalCancelButton?.addEventListener('click',()=>{
+    checkModal.remove();
+  })
+}
+//checkModalBackgroundEvent는 확인용 작은 모달들의 백그라운드를 누르면 모달이 없어지는 기능을 담당합니다.
 function checkModalBackgroundEvent($checkModal : string ,checkModal : HTMLDivElement){ //$checkModal은 그냥 string이고 이름 문자열일 뿐입니다.
     const checkModalBackgroundName = $checkModal + '-modal-background';
     const checkModalBackground = document.getElementsByClassName(
