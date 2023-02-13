@@ -123,3 +123,7 @@
 .error-modal-divider{
   margin : 10px 0 20px 0;
 }
+
+.loginCheck-modal-button-divider, .joinCheck-modal-modal-button-divider, .gatheringEdit-modal-button-divider, .gatheringDelete-modal-button-divider,.commentDelete-modal-button-divider,.joinCancel-modal-button-divider{
+  padding : 0.5rem;
+}
