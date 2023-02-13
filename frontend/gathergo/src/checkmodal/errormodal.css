@@ -32,7 +32,7 @@
 }
 
 /*모달 관련*/
-.error-modal-container, .loginCheck-modal-container, .joinCheck-modal-modal-container, .gatheringEdit-modal-container, .gatheringDelete-modal-container,.commentDelete-modal-container,.joinCancel-modal-container{
+.error-modal-container, .loginCheck-modal-container, .joinCheck-modal-container, .gatheringEdit-modal-container, .gatheringDelete-modal-container,.commentDelete-modal-container,.joinCancel-modal-container{
     position : fixed;
     display : flex;
     align-items : center;

@@ -208,7 +208,7 @@ rightClickDeleteComment();
 //------------------------------------------------------참가하기 버튼 이벤트 달기-------------------------------------------------------------
 
 function registerButtonEvent(){
-    const registerButtonList = document.getElementsByClassName('feed-info')
+    const registerButtonList = document.getElementsByClassName('not-login')
     for(const registerButton of Array.from(registerButtonList)){
         registerButton.addEventListener('click',()=>{
             insertCheckModal('joinCheck');
@@ -220,19 +220,19 @@ registerButtonEvent();
 //------------------------------------------------------수정하기 버튼 이벤트 달기-------------------------------------------------------------
 
 function settingButtonEvent(){
-    const settingButtonList = document.getElementsByClassName('setting-icon')
+    const settingButtonList = document.getElementsByClassName('not-login')
     for(const settingButton of Array.from(settingButtonList)){
         settingButton.addEventListener('click', () => {
           insertCheckModal('gatheringEdit');
         });
     }
 }
-// settingButtonEvent();
+//settingButtonEvent();
 
 //----------------------------------------------------로그인 안했을 때 버튼-----------------------------------------------------------------
 
 function notLoginEvent() {
-  const ButtonList = document.getElementsByClassName('not-login');
+  const ButtonList = document.getElementsByClassName('not-logined');
   for (const notLoginButton of Array.from(ButtonList)) {
     notLoginButton.addEventListener('click', () => {
       insertCheckModal('loginCheck');
