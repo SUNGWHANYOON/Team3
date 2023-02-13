@@ -220,14 +220,14 @@ registerButtonEvent();
 //------------------------------------------------------수정하기 버튼 이벤트 달기-------------------------------------------------------------
 
 function settingButtonEvent(){
-    const settingButtonList = document.getElementsByClassName('not-login')
+    const settingButtonList = document.getElementsByClassName('not-logining')
     for(const settingButton of Array.from(settingButtonList)){
         settingButton.addEventListener('click', () => {
           insertCheckModal('gatheringEdit');
         });
     }
 }
-//settingButtonEvent();
+settingButtonEvent();
 
 //----------------------------------------------------로그인 안했을 때 버튼-----------------------------------------------------------------
 
