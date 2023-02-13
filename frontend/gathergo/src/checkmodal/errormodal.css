@@ -45,7 +45,7 @@
 
 }
 
-.error-modal-background, .loginCheck-modal-background, .joinCheck-modal-modal-background, .gatheringEdit-modal-background, .gatheringDelete-modal-background,.commentDelete-modal-background,.joinCancel-modal-background{
+.error-modal-background, .loginCheck-modal-background, .joinCheck-modal-background, .gatheringEdit-modal-background, .gatheringDelete-modal-background,.commentDelete-modal-background,.joinCancel-modal-background{
     position : fixed;
     display : flex;
     align-items : center;
@@ -58,7 +58,7 @@
 
 }
 
-.error-modal, .loginCheck-modal, .joinCheck-modal-modal, .gatheringEdit-modal, .gatheringDelete-modal,.commentDelete-modal,.joinCancel-modal{
+.error-modal, .loginCheck-modal, .joinCheck-modal, .gatheringEdit-modal, .gatheringDelete-modal,.commentDelete-modal,.joinCancel-modal{
     
   overflow: hidden;
   background-color: white;
@@ -79,13 +79,14 @@
   box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
 }
 
-.error-modal > div , .loginCheck-modal > div, .joinCheck-modal-modal > div, .gatheringEdit-modal > div, .gatheringDelete-modal > div,.commentDelete-modal > div,.joinCancel-modal > div{
+.error-modal > div , .loginCheck-modal > div, .joinCheck-modal > div, .gatheringEdit-modal > div, .gatheringDelete-modal > div,.commentDelete-modal > div,.joinCancel-modal > div{
   font-family: "Asap", sans-serif;
   display: block;
   font-weight : 600;
   background: transparent;
   width: 100%;
   border: 0;
+  margin : 15px 0 15px 0;
 }
 .error-modal > div > button{
   font-family: "Asap", sans-serif;
@@ -107,7 +108,7 @@
   background-color: #bb4743;
 }
 
-.error-modal-header, .loginCheck-modal-header, .joinCheck-modal-modal-header, .gatheringEdit-modal-header, .gatheringDelete-modal-header,.commentDelete-modal-header,.joinCancel-modal-header{
+.error-modal-header, .loginCheck-modal-header, .joinCheck-modal-header, .gatheringEdit-modal-header, .gatheringDelete-modal-header,.commentDelete-modal-header,.joinCancel-modal-header{
   justify-content: center;
   padding : 0;
   height : 2rem;
@@ -116,7 +117,7 @@
   padding : 0 0 5px 0;
 }
 
-.error-modal-message, .loginCheck-modal-message, .joinCheck-modal-modal-message, .gatheringEdit-modal-message, .gatheringDelete-modal-message,.commentDelete-modal-message,.joinCancel-modal-message{
+.error-modal-message, .loginCheck-modal-message, .joinCheck-modal-message, .gatheringEdit-modal-message, .gatheringDelete-modal-message,.commentDelete-modal-message,.joinCancel-modal-message{
   padding-bottom : 10px;
 }
 
@@ -124,6 +125,6 @@
   margin : 10px 0 20px 0;
 }
 
-.loginCheck-modal-button-divider, .joinCheck-modal-modal-button-divider, .gatheringEdit-modal-button-divider, .gatheringDelete-modal-button-divider,.commentDelete-modal-button-divider,.joinCancel-modal-button-divider{
+.loginCheck-modal-button-divider, .joinCheck-modal-button-divider, .gatheringEdit-modal-button-divider, .gatheringDelete-modal-button-divider,.commentDelete-modal-button-divider,.joinCancel-modal-button-divider{
   padding : 0.5rem;
 }
