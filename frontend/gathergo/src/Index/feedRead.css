@@ -47,6 +47,7 @@
   border-radius: 5px;
 }
 .schedule-synthesis {
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   /* justify-content: space-between; */
@@ -167,7 +168,6 @@
 .user-info-icon {
   width: 1.5rem;
   height: 1.5rem;
-  margin-right: 0.5rem;
   display: flex;
   align-items: center;
 }
@@ -311,4 +311,28 @@
 [tooltip][flow^='down']:hover::before,
 [tooltip][flow^='down']:hover::after {
   animation: tooltips-vert 300ms ease-out forwards;
+}
+
+.modal-setting-dropdown.modal-setting-dropdown {
+  right: 0;
+  left: unset;
+}
+
+.modal-join-button {
+  min-width: 3rem;
+}
+
+.modal-dropdown-toggle::after {
+  content: none;
+}
+
+.setting-icon {
+  transform: rotate(0deg);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.setting-icon.rotate {
+  transform: rotate(+45deg);
+  transition: 0.3s;
 }
